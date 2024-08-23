@@ -1,2 +1,1 @@
-# bisyor online shopping
-# developer by: Abdulloh Olimov
+# agrobuy.loc

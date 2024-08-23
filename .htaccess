@@ -1,34 +1,55 @@
-<IfModule mod_rewrite.c>
-RewriteEngine On
+AddDefaultCharset UTF-8
 
-# Remove trailing slash from non-filepath urls
-RewriteCond %{REQUEST_URI} /(.+)/$
+Options FollowSymLinks
+DirectoryIndex index.php index.html
+RewriteEngine on
+
+RewriteRule /\. - [L,F]
+
+# define the app environment variable
+RewriteCond %{REQUEST_URI} !^/((frontend|backend|api)/web|admin|api)
+RewriteRule ^ - [E=APP:backend]
+RewriteCond %{REQUEST_URI} (?!^/frontend/web)^/admin
+RewriteRule ^ - [E=APP:frontend]
+RewriteCond %{REQUEST_URI} (?!^/api/web)^/api
+RewriteRule ^ - [E=APP:api]
+
+# rewrite the URI of the backend app
+RewriteCond %{ENV:APP} =backend
+RewriteRule ^ backend/web%{REQUEST_URI}
+# if a directory or a file exists, use the request directly
+RewriteCond %{ENV:APP} =backend
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ https://%{HTTP_HOST}/%1 [R=301,L]
+# otherwise forward the request to index.php
+RewriteRule ^ backend/web/index.php [L]
 
-# Remove WWW
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+# redirect to the URL without a trailing slash (uncomment if necessary)
+#RewriteRule ^admin/$ /admin [L,R=301]
 
-RewriteRule ^(.*)$ public/$1 [L]
+# rewrite the URI of the frontend app
+RewriteCond %{ENV:APP} =frontend
+RewriteRule ^admin/?(.*)$ frontend/web/$1
+# if a directory or a file exists, use the request directly
+RewriteCond %{ENV:APP} =frontend
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# otherwise forward the request to index.php
+RewriteRule ^ frontend/web/index.php [L]
 
-<ifmodule mod_expires.c="">
-ExpiresActive On
-ExpiresByType image/jpg "access 1 year"
-ExpiresByType image/jpeg "access 1 year"
-ExpiresByType image/gif "access 1 year"
-ExpiresByType image/png "access 1 year"
-ExpiresByType image/svg+xml "access 1 month"
-ExpiresByType text/css "access 1 month"
-ExpiresByType text/html "access 1 month"
-ExpiresByType application/pdf "access 1 month"
-ExpiresByType text/x-javascript "access 1 month"
-ExpiresByType application/x-shockwave-flash "access 1 month"
-ExpiresByType image/x-icon "access 1 year"
-ExpiresByType application/font-woff "access plus 1 month" 
-ExpiresByType application/font-woff2 "access plus 1 month"
-ExpiresByType application/font-sfnt "access plus 1 month"
-ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
-ExpiresDefault "access 1 month"
-</ifmodule>
-</IfModule>
+# redirect to the URL without a trailing slash (uncomment if necessary)
+#RewriteRule ^api/$ /api [L,R=301]
+
+# rewrite the URI of the backend app
+RewriteCond %{ENV:APP} =api
+RewriteRule ^api/?(.*)$ api/web/$1
+# if a directory or a file exists, use the request directly
+RewriteCond %{ENV:APP} =api
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# otherwise forward the request to index.php
+RewriteRule ^ api/web/index.php [L]
+
+# handle a directory trailing slash, redirect to the initial URI instead the rewritten one
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [L,R=301]

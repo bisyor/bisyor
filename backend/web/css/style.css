@@ -1,0 +1,11 @@
+.table{
+    width:99%;
+}
+
+.navbar.navbar-inverse .navbar-brand {
+    color: #a8acb1 !important;
+    background-color: transparent !important;
+}
+.navbar-inverse .navbar-header {
+    background: #2d353c !important;
+}
