@@ -1,0 +1,13 @@
+<svg id="logo_2" xmlns="http://www.w3.org/2000/svg" width="37" height="39.95" viewBox="0 0 37 39.95">
+    
+    <g id="Group">
+      <path id="Fill_36" data-name="Fill 36" d="M5.74,2.871h0a2.87,2.87,0,1,0-5.74,0V5.74H2.87a2.87,2.87,0,0,0,2.87-2.87" transform="translate(14.793)" fill="#235c8b"/>
+      <path id="Fill_37" data-name="Fill 37" d="M4.806,9.613h0A4.807,4.807,0,0,0,9.613,4.806V0H4.806a4.806,4.806,0,0,0,0,9.613" transform="translate(5.181 5.74)" fill="#235c8b"/>
+      <path id="Fill_38" data-name="Fill 38" d="M0,2.871H0a2.87,2.87,0,0,0,5.74,0V0H2.87A2.87,2.87,0,0,0,0,2.871" transform="translate(16.345 32.379)" fill="#f0bf29"/>
+      <path id="Fill_39" data-name="Fill 39" d="M4.807,0h0A4.807,4.807,0,0,0,0,4.806V9.613H4.807A4.806,4.806,0,0,0,4.807,0" transform="translate(22.085 22.766)" fill="#f0bf29"/>
+      <path id="Fill_40" data-name="Fill 40" d="M2.87,0h0a2.87,2.87,0,0,0,0,5.74H5.74V2.87A2.87,2.87,0,0,0,2.87,0" transform="translate(0 17.586)" fill="#47a6c8"/>
+      <path id="Fill_41" data-name="Fill 41" d="M9.613,4.806h0A4.806,4.806,0,0,0,4.806,0H0V4.806a4.807,4.807,0,0,0,9.613,0" transform="translate(5.74 23.326)" fill="#47a6c8"/>
+      <path id="Fill_42" data-name="Fill 42" d="M2.871,5.74h0a2.87,2.87,0,0,0,0-5.74H0V2.87A2.87,2.87,0,0,0,2.871,5.74" transform="translate(31.138 14.794)" fill="#df7961"/>
+      <path id="Fill_43" data-name="Fill 43" d="M0,4.806H0A4.807,4.807,0,0,0,4.806,9.613H9.613V4.806A4.806,4.806,0,0,0,0,4.806" transform="translate(21.525 5.181)" fill="#df7961"/>
+    </g>
+</svg>

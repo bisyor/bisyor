@@ -1,0 +1,15 @@
+<svg id="plus-circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <path  d="M2.148,12.518a7.333,7.333,0,1,1,10.37-10.37,7.333,7.333,0,1,1-10.37,10.37ZM1.333,7.333a6,6,0,1,0,6-6A6.007,6.007,0,0,0,1.333,7.333ZM6.667,10V8h-2a.667.667,0,0,1,0-1.333h2v-2A.667.667,0,0,1,8,4.667v2h2A.667.667,0,0,1,10,8H8v2a.667.667,0,0,1-1.333,0Z"/>
+    </clipPath>
+  </defs>
+  <g transform="translate(0.667 0.667)">
+    <path id="Combined_Shape-2" data-name="Combined Shape" d="M2.148,12.518a7.333,7.333,0,1,1,10.37-10.37,7.333,7.333,0,1,1-10.37,10.37ZM1.333,7.333a6,6,0,1,0,6-6A6.007,6.007,0,0,0,1.333,7.333ZM6.667,10V8h-2a.667.667,0,0,1,0-1.333h2v-2A.667.667,0,0,1,8,4.667v2h2A.667.667,0,0,1,10,8H8v2a.667.667,0,0,1-1.333,0Z"/>
+    <g clip-path="url(#clip-path)">
+      <g id="COLOR_black" data-name="COLOR/ black" transform="translate(-0.667 -0.667)">
+        <rect id="_Icon_Color" data-name="🔹 Icon Color" width="16" height="16" rx="4" fill="#00b273"/>
+      </g>
+    </g>
+  </g>
+</svg>

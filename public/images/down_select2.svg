@@ -1,0 +1,15 @@
+<svg id="chevron-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Shape" d="M4.667,3.724,1.138.2A.667.667,0,0,0,.2,1.138l4,4a.667.667,0,0,0,.943,0l4-4A.667.667,0,1,0,8.2.2Z"/>
+    </clipPath>
+  </defs>
+  <g transform="translate(3.333 5.333)">
+    <path id="Shape-2" data-name="Shape" d="M4.667,3.724,1.138.2A.667.667,0,0,0,.2,1.138l4,4a.667.667,0,0,0,.943,0l4-4A.667.667,0,1,0,8.2.2Z"/>
+    <g clip-path="url(#clip-path)">
+      <g id="COLOR_black" data-name="COLOR/ black" transform="translate(-3.333 -5.333)">
+        <rect id="Rectangle" width="16" height="16" fill="#8d9aaf"/>
+      </g>
+    </g>
+  </g>
+</svg>
